@@ -48,7 +48,7 @@ class MineStat
       }
       $start_time = microtime();
       $result = socket_connect($socket, $address, $port);
-      $this->latency = round((microtime() - $start_time) * 1000);
+      $this->latency = round((intval(microtime()) - intval($start_time)) * 1000);
       if($result === false)
       {
         $this->online = false;
